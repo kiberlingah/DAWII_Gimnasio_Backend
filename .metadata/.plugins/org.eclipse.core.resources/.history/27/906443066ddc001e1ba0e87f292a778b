@@ -1,0 +1,23 @@
+package com.dawii.GimnasioDAWII.Model;
+
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class ResponseData {
+	private String fechaInicio;
+    private String fechaVencimiento;
+    private String estado;
+    private Miembro miembros;
+    private Planes planes;
+    private User usuarios;
+    private List<Pago> pagos;
+
+}

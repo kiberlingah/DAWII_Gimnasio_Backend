@@ -1,0 +1,13 @@
+package com.dawii.GimnasioDAWII.Service;
+
+import java.util.List;
+import com.dawii.GimnasioDAWII.Model.Planes;
+
+public interface PlanesService {
+	
+	public List<Planes> list();
+	public Planes add(Planes p);
+	public Planes update(Planes p);
+	public void delete(int id);
+
+}

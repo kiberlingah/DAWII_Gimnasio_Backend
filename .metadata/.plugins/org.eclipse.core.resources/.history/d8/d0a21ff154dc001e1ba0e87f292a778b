@@ -1,0 +1,23 @@
+package com.dawii.GimnasioDAWII.Service.Impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dawii.GimnasioDAWII.Model.Membresia;
+import com.dawii.GimnasioDAWII.Repo.MembresiaRepo;
+import com.dawii.GimnasioDAWII.Service.MembresiaService;
+
+@Service
+public class MembresiaServiceImpl implements MembresiaService {
+	
+	
+	 @Autowired MembresiaRepo membresiaRepository;
+	 
+	 //crear membresia
+	@Override
+	public Membresia crearMembresia(Membresia membresia) {
+		// TODO Auto-generated method stub
+		return membresiaRepository.save(membresia);
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.dawii.GimnasioDAWII.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dawii.GimnasioDAWII.Model.Miembro;
+
+
+
+public interface MiembroRepo extends JpaRepository<Miembro, Integer>{
+	Miembro findBynrodoc(String nrodoc);
+}
