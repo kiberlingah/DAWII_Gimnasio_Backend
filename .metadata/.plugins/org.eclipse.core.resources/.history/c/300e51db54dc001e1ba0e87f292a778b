@@ -1,9 +1,0 @@
-package com.dawii.GimnasioDAWII.Repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.dawii.GimnasioDAWII.Model.Membresia;
-
-public interface MembresiaRepo extends JpaRepository<Membresia, Integer> {
-
-}

@@ -10,7 +10,7 @@ import com.dawii.GimnasioDAWII.Model.Planes;
 import com.dawii.GimnasioDAWII.projections.ReportPlanes;
 
 public interface PlanRepo extends JpaRepository<Planes, Integer>{
-	@Query("SELECT new com.dawii.GimnasioDAWII.projections.ReportPlanes(p.planesId, p.nombreplan, p.tiempo, p.diaMes, p.precio) "
+	@Query("SELECT new com.dawii.GimnasioDAWII.projections.ReportPlanes(p.planesId, p.nombreplan, p.tiempo, p.precio, p.url_img) "
             + "FROM Planes p "
             + "WHERE p.nombreplan = :nombreplan")
 public List<ReportPlanes> getReportPlanes(@Param("nombreplan") String nombreplan);

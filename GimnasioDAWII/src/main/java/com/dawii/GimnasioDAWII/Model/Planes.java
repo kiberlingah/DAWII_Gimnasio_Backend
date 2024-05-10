@@ -21,7 +21,7 @@ public class Planes {
 	private int planesId;
 	
 	private String nombreplan;
-	private String tiempo;
-	private String diaMes;
+	private Integer tiempo;
 	private double precio;
+	private String url_img;
 }

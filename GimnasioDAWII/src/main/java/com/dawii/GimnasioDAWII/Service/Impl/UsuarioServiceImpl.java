@@ -3,6 +3,7 @@ package com.dawii.GimnasioDAWII.Service.Impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.dawii.GimnasioDAWII.Model.Rol;
@@ -22,6 +23,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
 	@Autowired
 	UsuarioRepository usuarioRepo;
+	private final PasswordEncoder passwordEncoder;
 	
 	@Override
 	public List<User> list() {
@@ -47,21 +49,23 @@ public class UsuarioServiceImpl implements UsuarioService{
 
 	}
 	
-	/*@Override
+	@Override
 	@Transactional
     public UserResponse updateUser(UserRequest userRequest) {
        
 		User user = User.builder()
-        .usuarioId(userRequest.id)
+        .usuarioId(userRequest.usuarioId)
         .nombre(userRequest.getNombre())
         .apellido(userRequest.getApellido())
-        .rol(Rol.USER)
+        .email(userRequest.getEmail())
+        .password(passwordEncoder.encode(userRequest.getPassword()))
         .build();
         
-        usuarioRepo.updateUser(user.usuarioId, user.nombre, user.apellido);
+        usuarioRepo.updateUser(user.usuarioId, user.nombre, user.apellido, user.email, user.password);
 
-        return new UserResponse("El usuario se registró satisfactoriamente");
-    }*/
+        return new UserResponse("Se actualizo usuario");
+    }
+
 
 	@Override
     public UsuarioDTO getUser(Integer id) {

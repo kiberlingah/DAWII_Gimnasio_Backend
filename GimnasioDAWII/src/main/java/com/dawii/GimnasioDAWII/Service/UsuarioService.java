@@ -14,6 +14,6 @@ public interface UsuarioService {
 	public User update(User u);
 	public void delete(int id);
 	public UsuarioDTO getUser(Integer id);
-	/*public UserResponse updateUser(UserRequest userRequest);*/
+	public UserResponse updateUser(UserRequest userRequest);
 
 }

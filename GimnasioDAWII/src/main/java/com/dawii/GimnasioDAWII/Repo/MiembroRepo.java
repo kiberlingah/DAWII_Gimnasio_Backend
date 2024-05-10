@@ -19,6 +19,8 @@ public interface MiembroRepo extends JpaRepository<Miembro, Integer>{
 	        + "m.nombre, "
 	        + "m.apellido, "
 	        + "p.nombreplan, "
+	        + "me.fechaInicio, "
+	        + "me.fechaVencimiento, "
 	        + "me.estado) "
 	        + "FROM Membresia me "
 	        + "JOIN me.miembros m "

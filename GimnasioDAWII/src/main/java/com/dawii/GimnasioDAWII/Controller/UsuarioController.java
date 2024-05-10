@@ -45,11 +45,11 @@ public class UsuarioController {
         return new ResponseEntity<>(createdUsuario, HttpStatus.CREATED);
     }
 
-    @PutMapping // Actualizar
+    /*@PutMapping // Actualizar
     public ResponseEntity<User> update(@RequestBody User usuario) {
     	User updatedUsuario = usuarioService.update(usuario);
         return new ResponseEntity<>(updatedUsuario, HttpStatus.OK);
-    }
+    }*/
 
     @DeleteMapping("/{id}") // Eliminar
     public ResponseEntity<Void> delete(@PathVariable("id") int id) {
@@ -68,11 +68,11 @@ public class UsuarioController {
         return ResponseEntity.ok(userDTO);
     }
 
-    /*@PutMapping()
+    @PutMapping()
     public ResponseEntity<UserResponse> updateUser(@RequestBody UserRequest userRequest)
     {
         return ResponseEntity.ok(usuarioService.updateUser(userRequest));
-    }*/
+    }
 
 }
 

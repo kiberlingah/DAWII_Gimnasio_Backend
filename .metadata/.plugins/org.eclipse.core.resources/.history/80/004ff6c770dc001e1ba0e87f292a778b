@@ -1,8 +1,0 @@
-package com.dawii.GimnasioDAWII.Repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import com.dawii.GimnasioDAWII.Model.Planes;
-
-public interface PlanRepo extends JpaRepository<Planes, Integer>{
-
-}
